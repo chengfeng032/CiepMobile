@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html style="font-size: 23.4375px;"> 
+	<head>
+		<meta charset="UTF-8">
+		<title>项目对接</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="../css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/usercenter.css"/>
+		<style>
+		.nav-swiper-title .swiper-slide{
+			margin: 0 2.1333rem;
+		}
+	</style>
+	</head>
+	<body>
+		<header class="mob-header">
+			<div class="mob-header-content">
+				<a onClick="javascript :window.history.back(); return false;" class="back"></a>
+				<div class="layout-middle">
+					<div class="text">项目对接</div>
+				</div>
+				<a href="javascript:void(0);" class="search" style="display: none;">
+					<span></span>
+				</a>
+			</div>			
+		</header>
+		<div class="viewport">
+			<!--<header id="JS_nav_swiper" class="nav-swiper-title swiper-container-horizontal">
+				<ul class="swiper-wrapper">
+					<li class="swiper-slide swiper-slide-active current" id="JS_project_import">项目引进</li>
+					<li class="swiper-slide swiper-slide-active" id="JS_project_extension">项目推广</li>				
+				</ul>
+			</header>-->
+			<div class="xiangmuguanli" id="xiangmuguanli">
+				<template id="xiangmuguanli_list">
+					<ul class="xiangmuguanli-list">
+						{{each rows as value i}}
+						<li class="item">
+							<a style="display: block; padding: 0;" href="projectDetail.html?id={{value.id}}">
+								<div class="one">
+									<div class="company-name">{{value.name}}</div>							
+								</div>
+								<div class="two">
+									<span>{{value.sector}}</span>
+									<i></i>
+									<span>{{value.type}}</span>
+								</div>
+								<time>{{value.releasetime}}</time>	
+							</a>
+						</li>	
+						{{/each}}
+					</ul>
+				</template>
+			</div>			
+		</div>
+		<script src="../js/sea.js" type="text/javascript" charset="utf-8"></script>		
+		<script src="../js/config.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">						
+			seajs.use(["docking"],function(docking){
+				docking.initProjectDocking(); 
+			})
+		</script>
+	</body>		
+</html>

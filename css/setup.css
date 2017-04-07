@@ -1,0 +1,79 @@
+@charset "utf-8";.section-block{background-color:#fff;margin-bottom:0.4267rem;}
+.section-block ul li{height:1.8773rem;}
+.setting-table-view .mob-table-view-cell{padding:0 0.5333rem;}
+.setting-table-view .mob-table-view-cell:after{left:0.5333rem;background-color:#bebebe;}
+.mob-table-view-cell a{display:block;}
+.section-block ul li .mob-navigate-right{font-family:"microsoft yahei";font-size:0.64rem;color:#666666;margin:0;padding:0;height:inherit;}
+.border-c{margin-bottom:1.024rem;}
+@font-face{font-family:Muiicons;font-weight:400;font-style:normal;src:url(../fonts/mui.ttf) format('truetype')}
+.mob-table-view{position:relative;margin-top:0;margin-bottom:0;padding-left:0;background-color:#fff;}
+.mob-table-view:before{position:absolute;left:0;right:0;height:1px;background-color:#c8c7cc;-webkit-transform:scaleY(0.5);transform:scaleY(0.5);content:'';top:-1px;}
+.mob-table-view:after{position:absolute;left:0;right:0;height:1px;background-color:#c8c7cc;-webkit-transform:scaleY(0.5);transform:scaleY(0.5);content:'';}
+.mob-table-view-cell{position:relative;overflow:hidden;-webkit-touch-callout:none;}
+.mob-table-view-cell i{vertical-align:middle;}
+.mob-table-view-cell span{height:1.8773rem;line-height:1.8773rem;padding-left:0.2133rem;}
+.mob-navigate-right:after,.mob-push-right:after{right:0.32rem;content:'\e583'}
+.mob-navigate-right:after,.mob-push-left:after,.mob-push-right:after{font-family:Muiicons;font-size:inherit;line-height:1;position:absolute;top:50%;display:inline-block;-webkit-transform:translateY(-50%);transform:translateY(-50%);text-decoration:none;color:#bbb;-webkit-font-smoothing:antialiased;}
+.mob-navigate-right:after,.mob-push-right:after{font-size:1.1307rem;color:#ccc;}
+.mob-table-view-cell:after{position:absolute;right:0;bottom:0;left:0.32rem;height:1px;content:'';-webkit-transform:scaleY(.5);transform:scaleY(.5);background-color:#c8c7cc;}
+.mob-table-view li:last-child:after{height:0;}
+.login-item,.submit-item{margin-top:2.1333rem;text-align:center;}
+.login-item a,.submit-item a{display:inline-block;background-color:#519be4;border-radius:0.2133rem;width:14.9333rem;height:2.0907rem;line-height:2.0907rem;font-size:0.6827rem;color:#FFFFFF;text-align:center;margin:0 auto;}
+/*意见反馈--开始*/
+.feedback-content{height:8.5333rem;background-color:#FFFFFF;padding:0.4267rem 0.512rem;border-bottom:1px solid #CCCCCC;margin-bottom:0.4267rem;}
+.feedback-content textarea{width:100%;height:100%;font-size:0.64rem;color:#999999;overflow:hidden;resize:none;border:none;outline:none;}
+.feedback-tel{height:2.1333rem;line-height:2.1333rem;padding:0 0.512rem;border:1px solid #CCCCCC;border-width:1px 0 1px 0;background-color:#FFFFFF;}
+.feedback-tel input[type="text"]{width:100%;font-size:0.5973rem;color:#999999;overflow:hidden;resize:none;border:none;outline:none;}
+/*意见反馈--结尾*/
+/*修改密码--开始*/
+.oldpassword,.newpassword{width:14.9333rem;height:1.8773rem;line-height:1.8773rem;border:1px solid #CCCCCC;border-radius:0.2133rem;background-color:#FFFFFF;margin:0 auto;position:relative;}
+.newpassword{margin-top:60px;}
+.oldpassword label,.newpassword label{font-size:0.64rem;color:#666666;padding-left:0.8533rem;}
+.oldpassword input,.newpassword input{font-size:0.64rem;color:#CCCCCC;border:none;outline:none;overflow:hidden;margin-left:0.64rem;}
+.newpassword .new{margin-right:0.4267rem;}
+.newpassword i{display:inline-block;}
+.icon-see{width:0.7467rem;height:0.4907rem;background-image:url(../img/userCenter/icon-see.png);background-repeat:no-repeat;background-size:cover;}
+.close-see{background-image:url(../img/userCenter/close-see.png);}
+/*修改密码--结束*/
+
+/*教育经验列表*/
+.inster-item{background:none;height:2.0907rem;text-align:center;line-height:2.0907rem;}
+.inster-item .inster{color:#509be4;font-size:0.64rem;position:relative;padding-left:1.2rem;}
+.inster-item .inster:before{display:inline-block;content:'';width:0.7rem;height:0.7rem;background-image:url(../img/userCenter/add.png);background-repeat:no-repeat;background-size:contain;position:absolute;top:50%;margin-top:-0.2773rem;left:0;}
+.section-block{border:none;margin:0;background:none;}
+.mob-table-view-cell span{font-size:0.5973rem;}
+.mob-table-view-cell a{position:relative;}
+.mob-table-view-cell .time{color:#999999;position:absolute;right:1.7066rem;}
+.mob-table-view li:last-child:after{height:0px;}
+.mob-table-view:after{height:0;}
+.inster-border-bottom{border:1px solid #CCCCCC;border-width:1px 0 1px 0;background-color:#fff;}
+.mob-navigate-right-2{font-family:"microsoft yahei";font-size:0.64rem;color:#666666;margin:0;padding:0;border:1px solid #CCCCCC;border-width:1px 0 0 0;padding-left:0.53rem;}
+.mob-edit-del{display:flex;}
+.mob-edit-del span,.mob-edit-del a{text-align:center;flex:1;border:1px solid #CCCCCC;border-width:1px 1px 1px 0;}
+.mob-edit-del .mob-del{border-right-width:0;}
+.mob-table-view .mob-table-view-cell{padding:0;margin-bottom:0.5rem;}
+.mob-table-view .mob-table-view-cell:after{background:none;}
+.mob-table-view{background:none;}
+.mob-table-view li{background-color:#fff;}
+.mob-eidt span{border:none;}*/
+
+/*工作经验列表*/
+.inster-item{background:none;height:2.0907rem;text-align:center;line-height:2.0907rem;}
+.inster-item .inster{color:#509be4;font-size:0.64rem;position:relative;padding-left:1.2rem;}
+.inster-item .inster:before{display:inline-block;content:'';width:0.7rem;height:0.7rem;background-image:url(../img/userCenter/add.png);background-repeat:no-repeat;background-size:contain;position:absolute;top:50%;margin-top:-0.2773rem;left:0;}
+.section-block{border:none;margin:0;background:none;}
+.mob-table-view-cell span{font-size:0.5973rem;}
+.mob-table-view-cell a{position:relative;}
+.mob-table-view-cell .time{color:#999999;position:absolute;right:1.7066rem;}
+.mob-table-view li:last-child:after{height:0px;}
+.mob-table-view:after{height:0;}
+.inster-border-bottom{border:1px solid #CCCCCC;border-width:1px 0 1px 0;background-color:#fff;}
+.mob-navigate-right-2{font-family:"microsoft yahei";font-size:0.64rem;color:#666666;margin:0;padding:0;border:1px solid #CCCCCC;border-width:1px 0 0 0;padding-left:0.53rem;}
+.mob-edit-del{display:flex;}
+.mob-edit-del span,.mob-edit-del a{text-align:center;flex:1;border:1px solid #CCCCCC;border-width:1px 1px 1px 0;}
+.mob-edit-del .mob-del{border-right-width:0;}
+.mob-table-view .mob-table-view-cell{padding:0;margin-bottom:0.5rem;}
+.mob-table-view .mob-table-view-cell:after{background:none;}
+.mob-table-view{background:none;}
+.mob-table-view li{background-color:#fff;}
+.mob-eidt span{border:none;}

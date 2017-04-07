@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html style="font-size: 23.4375px;">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>修改教育经历</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="../css/common.css" />
+		<link rel="stylesheet" type="text/css" href="../css/index.css" />
+	</head>
+
+	<body>
+		<header class="mob-header">
+			<div class="mob-header-content">
+				<a href="educationExperience.html" class="back"></a>
+				<div class="layout-middle">
+					<div class="text">添加教育经历</div>
+				</div>
+				<a href="javascript:void(0);" class="login" id="JS_education_save">
+					<span>保存</span>
+				</a>
+			</div>
+		</header>
+		<div class="viewport">
+			<ul class="personalInformation-list">
+				<li class="item">
+					<span class="label"><i>*</i>入学时间</span>
+					<input type="date" id="starttime" value="" class="mob-push-right date-push-right"/>
+				</li>
+				<li class="item">
+					<span class="label"><i>*</i>毕业时间</span>
+					<input type="date" id="overtime" value="" class="mob-push-right date-push-right"/>
+				</li>
+				<li class="item">
+					<span class="label"><i>*</i>学&nbsp;&nbsp;&nbsp;校</span>
+					<div class="Right">
+						<input type="text" name="school" id="school" placeholder="学校" value="" />
+						<i class="icon-clear"></i>
+					</div>
+				</li>
+				<li class="item select-area">
+					<span class="label"><i>*</i>学&nbsp;&nbsp;&nbsp;历</span>
+					<span class="select-value mob-push-right select-push-right"></span>
+					<select class="xiala select-over-none" id="JS_education_degree">
+					</select>
+				</li>
+				<li class="item select-area">
+					<span class="label"><i>*</i>专&nbsp;&nbsp;&nbsp;业</span>
+					<span class="select-value mob-push-right select-push-right"></span>
+					<select class="xiala select-over-none" id="JS_learn_major">
+					</select>
+				</li>
+			</ul>
+			<ul class="personalInformation-list">
+				<li class="item">
+					<span class="label"><i>*</i>专业描述</span>
+					<!--<div class="number"><span class="current">0</span>/200</div>-->
+				</li>
+				<li class="item textarea" style="height: 5.12rem;">
+					<textarea class="miaoshu" placeholder="请输入自我评价"></textarea>
+				</li>
+			</ul>
+		</div>
+	</body>
+	<script src="../js/sea.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/config.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		seajs.use(["userCenter"],function(userCenter){
+			userCenter.initEducationEdit();
+		})
+	</script>
+
+</html>

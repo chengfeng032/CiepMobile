@@ -1,0 +1,69 @@
+@charset "utf-8";
+.user-login-img{padding-top:1.0667rem;padding-bottom:1.0667rem;text-align:center;}
+.user-login-img img{width:7.936rem;height:3.4133rem;}
+.login-type-toggle{height:100%;width:100%;}
+.login-type-toggle .login-type-password{width:13.0133rem;margin:0 auto;}
+.login-type-toggle ul li{width:13.0133rem;height:1.8773rem;display:block;margin-bottom:1.28rem;position:relative;}
+.ipt-account,.ipt-password{background-image:url(../img/login/inputBg.png);background-repeat:no-repeat;background-position:center;background-size:contain;}
+.btn-login{border:1.5px solid #FFFFFF;border-radius:0.1707rem;}
+.user-icon{display:inline-block;width:0.7467rem;height:0.7467rem;position:absolute;left:0.4267rem;top:0.576rem;}
+.del-icon{background-image:url(../img/login/del.png);background-repeat:no-repeat;background-size:contain;right:1.28rem;left:auto;}
+.show-password-icon{background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAYAAAAehFoBAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA3FpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDplMjgzYzUyOS05ZDlkLWM0NDgtOWU3Yy1iOTRlNGM1ZWUyODIiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6Njk3MUNFMkRBN0IyMTFFNUExMzJBOUEyRjJBMjQzOUUiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6Njk3MUNFMkNBN0IyMTFFNUExMzJBOUEyRjJBMjQzOUUiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjc0M2E4MmNmLWIxMjgtZTU0Yy04ZDM1LTQwNDIwMmI3MDJiZiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDplMjgzYzUyOS05ZDlkLWM0NDgtOWU3Yy1iOTRlNGM1ZWUyODIiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4YJrc2AAADcElEQVR42uyZW0gUYRTHXcutl+4RRL10oQsEpgtGUUREZJQSEWYLFlZ2UcmEKCKioqeI7pFlVqRdrO2hwkIoupMGblQE9RAokdFFtquEdtn+B/4Dw7Az883MGhnzwY/jfvPtzH/PnHO+M2MgHo+ndKeRmtLNhi/YF2wYPb2eIBqNevp+KBTyQ8IX7CddEkY/OuML+PXPCEaFGAwzB2SCiWAcGGK4c59AM3gOGsF18MLtNQNOewmIDMIUgDCYDnokWCae/Q36mBwXwSdBFcparEsEQ2gazGqwAQzXHboE7oLHFPLeEAYDwAh6fwaYBsby2DewF+yE8PakCYbYCTDVIINTN0ENOAs6XdzZHLAC5PJzC1gC0fc8C4bYQpgK0IsxKB65kKQcEo9vBLPBT1AO0YdclzWILYU5TrEnwGQLsRLba0ED+EoaOBc0+c4tkA2OsQAcxDU3u/IwvlgEU8mPR8Aai/MMA3WsFImGxPc80GpxjkWgln+H4elzyh6GWLmwdmuW2ogN6sSKR/NAX5LHOTl2lXfKrAk6D1OiOQgaRikJxsJU3v4gw6HaJg5X6cTOBRFdSEQ49wCkg5U2ndthmDP8sTXQElDx8GJWg0Zmst0I0+4DHxMcl7n9hrVWo4ghJPmyQEVwOe0pxUzPpL1sseYKbYZCf/xdd+31KoJf6UpOskYa7Q/F9ZNo36kIllIWY8JUKJz8EW2uxZps2mcKm1Q+TD5zoNRWMG7JG5hlIM6teKbNNbTys47bsHHIXJlhrZnYMbpSuglaXjupw9tgtmq/Q+dJ45BS9ZBVQCrFHlCv86zkxBTwFGSBDpPzjATX2GechtgCp+3ldraKUoOjDJFIgnUdLF11zOxEa55wjZlY6VUuUqz0Kcsdb834hXEW8gOcki25ymR5KxNFwqIJtJMmzmVZ7HIl9L4mNgfX7vTarUk/sIubidTn3fSIlyHlcAuYr9v+y6zEOu2H09l0a7X0BnfCWhcdWjFYyM8fpEGCUKXzOHriYBNfzJZwKKfl8ec+uMMGvg18ZhM/kFViNENmqq5Bkng+CnZAbFuXPSJReG8mRiEriJPRwuZf+oa3Tt/8BLy+H4Z4efyZxcQaDwaB/nyWi7GXeMkEvM0+wfWrqmQ85jez2Ff6L1J8wb7g/1BwwP+3ly/YF/x3xx8BBgCtfQ4D2j4KEwAAAABJRU5ErkJggg==) no-repeat center center;right:0.32rem;left:auto;background-size:contain;}
+.show-password{background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAYAAAAehFoBAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA3FpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDplMjgzYzUyOS05ZDlkLWM0NDgtOWU3Yy1iOTRlNGM1ZWUyODIiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6RUVBNENCNjVBNzdGMTFFNTk5MDI5MjI4NzYwNjc1MzUiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6RUVBNENCNjRBNzdGMTFFNTk5MDI5MjI4NzYwNjc1MzUiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOmUyODNjNTI5LTlkOWQtYzQ0OC05ZTdjLWI5NGU0YzVlZTI4MiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDplMjgzYzUyOS05ZDlkLWM0NDgtOWU3Yy1iOTRlNGM1ZWUyODIiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4dzTNoAAADMklEQVR42uyZa2jNYRzHzxkOb9ylxBuXXGo122pSJEmuk+Qyq1nDXLaFlUgS8kqSQi4zZC5n5IUXeEPutalNSPFCbcnkstyXzOX4PPU99e+0/+2cM5n+T3367fyvn/P8n+f3/P5n4VgsFupKLSPUxVogHAgntO6pXqCxsTGl83Nzc4MhEQgHky4Nra864zP8+meEyRCDCLMgB8bDWBic8OQ+QhM8hXq4Bs+SvWfYby2BZIRQBIUwBbp1cJjp2d/Q22a/ET4J1aS1950ijGgPwhrYBMMsuy7BHXgokbcJw6A/DFfvT4XJMEb7vsI+2I14W9qEkc0k1EC2Nt2A03AO2pN4svmwEubpczMsQ/puysLIlhAOQ0+NQdMjF9I0h0yPb4YZ8BMqkT6YdFpDtoJwXLInYKKDrBnb66AOvog6bYvYnHMTZsIxJYAD3HNrUj3MiaWEKn08AmsdrjMULitTdNTM+J4LLQ7XWAK1+ruQno567mFkzY3jj6bYRTbiIhvSvit6UnZF0HlCebyDcBjpSZgDM/T4IxoONS7jcLWLbLxlwSqXyu0Q4Sz0MZMal7CXHl6qbFCvmezWCn1MMi/HlmoImfmywItwpeIpjxI5PoSzPdTH3yz33uhF+IUl5aS7/fB43ATFN16ETSozy+Vi5V+39sCH8BMPi1QBoUBpscJVmEfyirAcYlqKp7ncI+pDOOoiO9qSSrfg8tJPHt5B2B7/Hg49aVLVfWUBp/YY8uC7zf4RcFV1xhlki/yudDstQ8K8aS6yOc4IzNHMtmuPYLaDbKZF1tQpK3wvzXzDmBL5fm0yS3K1zeEtmigboAHaRIO25TmscuXq/bhsPvduT7VaM/XAHi0mJj/vhYspZgyTDrfBfMvyv95J1m89nKWiO55Lr2slrE2iQiuDhfr8zhRIiHq6jq83DhXxZSoJh2izef25B7dVwLfCJxXxA1TAj9KQmWRZxs14Pgq7kG3ttFckiffSxChRBvHTmlX8m7rhtd9ffsKp/j6MvHn9ma6JNQ4GQj+9y5kF6AM81wS8lZhN/Aqn4zW/Scm+KvghJRAOhP9D4XDwb69AOBD+u+2PAAMAjbb77BS8gpAAAAAASUVORK5CYII=) no-repeat center center;}
+.account-icon{background-image:url(../img/login/icon_account.png);background-repeat:no-repeat;background-position:center;background-size:contain;}
+.password-icon{background-image:url(../img/login/icon_password.png);background-repeat:no-repeat;background-position:center;background-size:contain;}
+.login-type-password li input[type="text"],.login-type-password li input[type="password"]{font-size:0.68rem;color:#FFFFFF;border:none;outline:none;background:none;font-weight:normal;line-height:0.64rem;border-left:1px solid #ffffff;position:absolute;left:1.7067rem;top:0.6187rem;padding-left:0.4267rem;width:8.5rem;border-radius:0;}
+.login-type-toggle ul li input::-webkit-input-placeholder{color:#d1edf8;font-family:"microsoft yahei";font-weight:normal;}
+.btn-login{text-align:center;}
+.btn-login a:hover{color:#FFFFFF;}
+.login-button{display:block;font-size:0.5973rem;color:#FFFFFF;line-height:1.8773rem;}
+.login-type-password li:last-child{margin-bottom:0;}
+.login-options{width:13.0133rem;margin:0.4267rem auto;font-size:0.512rem;color:#FFFFFF;}
+.login-options p{padding-left:0.4267rem;padding-right:0.4267rem;}
+.login-options .ruick-register{color:#ff1301;}
+.login-options .retrieve-password{float:right;display:inline;color:#FFFFFF;}
+.mob-login-extLogin{margin-top:4rem;padding:0 0.2133rem;font-size:12px;}
+.mob-login-extLogin .bd,.mob-login-extLogin .hd{text-align:center;}
+.mob-login-extLogin .bd .mob-login-extLogin-item{margin-top:1.3rem;}
+.ico{display:inline-block;vertical-align:middle;}
+.icon-extLogin{display:inline-block;background-image:url(../img/login/dsf.png);background-repeat:no-repeat;background-size:contain;width:13.9306rem;height:0.68rem;}
+.icon-extLogin-weixin{display:inline-block;background-image:url(../img/login/wx.png);background-repeat:no-repeat;background-size:cover;width:2.176rem;height:2.176rem;}
+
+/*------注册页面----- */
+.login-options .about-register .define{font-size:0.4693rem;color:#FFFFFF;font-weight:normal;display:block;text-align:center;}
+.select-list-item{float:left;}
+.text-left{text-align:left;}
+.text-right{text-align:right;}
+.user-register-select{padding-top:2.1333rem;padding-bottom:1.0667rem;text-align:center;}
+.user-register-select .select-list{width:13.0133rem;margin:0 auto;display:-webkit-flex;display:-webkit-box;display:flex;}
+.select-list-item{-webkit-box-flex:1;flex:1;display:block;}
+.select-list-item span{font-size:0.5547rem;color:#ececec;display:block;}
+.current span{font-size:0.64rem;color:#FFFFFF;}
+.select-list-item span:before{display:inline-block;content:'';background-image:url(../img/login/unselect.png);background-position:center;background-repeat:no-repeat;width:0.704rem;height:0.6187rem;vertical-align:-10%;background-size:contain;}
+.current span:before{display:inline-block;content:'';background-image:url(../img/login/select.png);background-position:center;background-repeat:no-repeat;background-size:contain;width:0.704rem;height:0.6187rem;}
+.four-step{padding-top:4.2667rem;position:fixed;top:0;bottom:0;left:0;right:0;background:#ececec;}
+.res-succ{top:1.8773rem;}
+.result{width:14.9333rem;border-radius:0.1067rem;border:1px solid #CCCCCC;background:#fff;margin:0 auto;text-align:center;padding-top:1.0667rem;padding-bottom:0.8533rem;}
+.result .success{display:block;width:1.92rem;height:1.92rem;background-image:url(../img/meetingsuccess.png);background-repeat:no-repeat;background-position:0 -3.3493rem;background-size:cover;margin:auto;}
+.result .font{display:block;font-size:0.64rem;color:#333333;width:9.6rem;margin:auto;padding-top:0.64rem;}
+.result .res-msg{display:block;font-size:0.64rem;color:#333333;width:12.5rem;margin:auto;padding-top:0.64rem;text-align:left;}
+.submit-item{margin-top:2.1333rem;text-align:center;}
+.submit-item a{display:inline-block;background-color:#519be4;border-radius:0.2133rem;width:14.9333rem;height:1.92rem;line-height:2.0907rem;font-size:0.6827rem;color:#FFFFFF;text-align:center;margin:0 auto;}
+.title{font-family:"microsoft yahei";font-size:0.7893rem;color:#333333;padding:0.8533rem 0;text-align:center;padding-right:0.5333rem;}
+.content{font-family:"microsoft yahei";font-size:0.6187rem;color:#333333;padding:0 0.512rem;text-indent:2em;}
+.hd{position:relative;width:100%;}
+.hd .remarks{font-size:0.4693rem;color:#999999;margin-left:0.8533rem;position:absolute;bottom:0.32rem;}
+.hd .horizontal{padding-top:2.1333rem;padding-bottom:1.0667rem;text-align:center;}
+.hd .horizontal .step{display:inline-block;font-size:0.64rem;color:#999999;padding-right:0.4267rem;}
+.hd .horizontal .step1{color:#FA4436;}
+.hd .horizontal .step .next{margin-right:0.4267rem;}
+.username,.yanzhengma,.password{width:14.9333rem;height:1.92rem;background:#fff;border-radius:0.1067rem;border:1px solid #CCCCCC;margin:auto;font-size:0.64rem;color:#333333;}
+.yanzhengma{background:none;border:none;margin-top:1.28rem;position:relative;}
+.yanzhengma .tianxie{width:9.6rem;height:1.92rem;background:#fff;border-radius:0.1067rem;border:1px solid #CCCCCC;}
+.yanzhengma .tianxie input[type="text"],.username input[type="text"],.password input[type="password"]{height:100%;font-size:0.64rem;color:#333333;font-family:"microsoft yahei";padding-left:0.64rem;width:8.96rem;border:none;outline:none;background:none;}
+.username label,.password label{padding-left:0.64rem;}
+.username input[type="text"],.password input[type="password"]{width:10.6666rem;}
+.second-step .username input[type="text"]{width:10.0266rem;}
+.password.margin{margin-top:1.28rem;}
+.yanzhengma .code{width:4.8rem;height:1.92rem;background:#fff;border-radius:0.1066rem;border:1px solid #CCCCCC;position:absolute;right:0;top:0;}
+.second-step .code a{display:block;line-height:1.92rem;width:100%;background:#519be4;text-align:center;color:#fff;border-radius:0.1066rem;;}

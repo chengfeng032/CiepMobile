@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html style="font-size: 23.4375px;">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>职位信息</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="../css/common.css" />
+		<link rel="stylesheet" type="text/css" href="../css/docking.css"/>
+	</head>
+
+	<body>
+		<header class="mob-header">
+			<div class="mob-header-content">
+				<a onClick="javascript :window.history.back(); return false;" class="back"></a>
+				<div class="layout-middle">
+					<div class="text">职位信息</div>
+				</div>
+				<a href="javascript:void(0);" class="search" style="display: none;">
+					<span></span>
+				</a>
+			</div>
+		</header>
+		<div class="viewport" style="margin-bottom: 3rem;">
+			<div class="zhiweixinxi">
+				<div class="title">
+					<span class="positionname"></span>
+					<time class="time"></time>
+				</div>
+				<div class="address">
+					<span class="companyname"></span>
+					<a href="unitInformation.html" class="chakan">[查看]</a>
+				</div>
+				<div class="wrapper">
+					<div class="property">
+						<p>单位性质：<span class="unit-property"></span></p>
+						<p>单位类型：<span class="unit-category"></span></p>
+						<p>工作经验：<span class="work-experience"></span></p>
+					</div>
+					<div class="vertical-line"><i></i></div>
+					<div class="scale">
+						<p>规模：<span class="unit-scale"></span></p>
+						<p>人数：<span class="unit-number"></span></p>
+						<p>学历：<span class="work-education"></span></p>
+					</div>
+				</div>
+			</div>
+			<div class="zhiweimiaoshu">
+				<header class="miaoshu-header"><span>职位描述</span></header>
+				<div class="miaoshu-content"></div>
+			</div>
+			<div class="gangweizhize">
+				<header class="zhize-header"><span>岗位职责</span></header>
+				<div class="zhize-content"></div>
+			</div>
+		</div>
+		<div class="delivery">
+			<a href="javascript:void(0);" id="JS_delivery">申请职位</a>
+		</div>
+		<script src="../js/sea.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/config.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			seajs.use(["docking"], function(docking) {
+				docking.initPositionInformation();
+			})
+		</script>
+	</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html style="font-size: 23.4375px;">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>简历预览</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="../css/common.css" />
+		<link rel="stylesheet" type="text/css" href="../css/index.css" />
+		<link rel="stylesheet" type="text/css" href="../css/usercenter.css"/>
+	</head>
+
+	<body>
+		<header class="mob-header">
+			<div class="mob-header-content">
+				<a href="myCandidate.html" class="back"></a>
+				<div class="layout-middle">
+					<div class="text">简历预览</div>
+				</div>
+				<a href="javascript:void(0);" class="login" style="display: none;">
+					<span>保存</span>
+				</a>
+			</div>
+		</header>
+		<div class="viewport">
+			<ul class="personalInformation-list" style="padding-left: 0; margin-bottom: 0; border: none; background-color: #ececec;">
+				<li class="item no-border min-li-heigt">
+					<span class="label">基本信息</span>
+				</li>
+			</ul>
+			<ul class="personalInformation-list">
+				<li class="item">
+					<span class="label">中文姓名</span>
+					<span class="txt" id="name"></span>
+				</li>
+				<li class="item">
+					<span class="label">性&nbsp;&nbsp;&nbsp;别</span>
+					<span class="txt txt-indent" id="sex"></span>
+				</li>
+				<li class="item">
+					<span class="label">出生年月</span>
+					<span class="txt" id="birthday"></span>
+				</li>
+				<li class="item">
+					<span class="label">手机号码</span>
+					<span class="txt" id="telphone"></span>
+				</li>
+				<li class="item no-border">
+					<span class="label">电子邮箱</span>
+					<span class="txt" id="email"></span>
+				</li>
+			</ul>
+			<ul class="personalInformation-list" style="padding-left: 0; margin-bottom: 0; border: none; background-color: #ececec;">
+				<li class="item no-border min-li-heigt">
+					<span class="label">教育经历</span>
+				</li>
+			</ul>
+			<ul class="personalInformation-list" id="JS_education_list">
+				<template id="JS_education_info">
+					{{each educationList as value i}}
+					<li class="item">
+						<span class="label">{{value.school}}</span>
+						<div class="Right">
+							<span class="txt">{{value.degree}}</span>
+							<span class="txt">{{value.startdate | yearMonth}} - {{value.enddate | yearMonth}}</span>
+						</div>
+					</li>
+					{{/each}}
+				</template>
+			</ul>
+			<ul class="personalInformation-list" style="padding-left: 0; margin-bottom: 0; border: none; background-color: #ececec;">
+				<li class="item" style="height: 1.8rem; line-height: 1.8rem;">
+					<span class="label">工作经验</span>
+				</li>
+			</ul>
+			<ul class="personalInformation-list" id="JS_work_list">
+				<template id="JS_work_info">
+					{{each workExperienceList as value i}}
+					<li class="item">
+						<span class="label">{{value.company}}</span>
+						<div class="Right">
+							<span class="txt">{{value.startdate | yearMonth}} - {{value.enddate | yearMonth}}</span>
+						</div>
+					</li>
+					{{/each}}
+				</template>
+			</ul>
+
+			<ul class="personalInformation-list" style="padding-left: 0; margin-bottom: 0; border: none; background-color: #ececec;">
+				<li class="item" style="height: 1.8rem; line-height: 1.8rem;">
+					<span class="label">求职意向</span>
+				</li>
+			</ul>
+			<ul class="personalInformation-list">
+				<li class="item">
+					<span class="label">职位名称</span>
+					<span class="txt" id="position"></span>
+				</li>
+				<li class="item">
+					<span class="label">期望薪资</span>
+					<span class="txt" id="salary"></span>
+				</li>
+				<li class="item">
+					<span class="label">工作类型</span>
+					<span class="txt" id="worktype"></span>
+				</li>
+				<li class="item">
+					<span class="label">地&nbsp;&nbsp;&nbsp;点</span>
+					<span class="txt txt-indent" id="address"></span>
+				</li>
+				<li class="item no-border">
+					<span class="label">到岗时间</span>
+					<span class="txt" id="comeworktime"></span>
+				</li>
+			</ul>
+		</div>
+	</body>
+
+	<script src="../js/sea.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/config.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		seajs.use(["userCenter.js"],function(userCenter){
+				userCenter.initResumePreview();
+			})
+	</script>
+
+</html>

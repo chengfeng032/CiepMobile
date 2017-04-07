@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html style="font-size: 23.4375px;"> 
+	<head>
+		<meta charset="UTF-8">
+		<title>往期回顾</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="../css/common.css" />		
+		<link rel="stylesheet" type="text/css" href="../css/wangqihuigu.css"/>
+	</head>
+
+	<body>
+		<header class="mob-header">
+			<div class="mob-header-content">
+				<a onClick="javascript :window.history.back(); return false;"  class="back"></a>
+				<div class="layout-middle">
+					<div class="text">往期回顾</div>
+				</div>
+				<a href="javascript:void(0);" class="search" style="display: none;">
+					<span></span>
+				</a>
+			</div>
+		</header>
+		<div class="viewport">	
+			<section class="mod_player">
+				<video width="100%" height="100%" controls="controls"  id="JS_video_controls">					
+				</video>				
+			</section>
+			<article>
+				<header class="video-title">
+					<h1>重温2016会议日程</h1>
+					<a href="javascript:void(0);" id="JS_share_open">
+						<i class="openshare"></i>
+					</a>
+				</header>
+				<!--<section class="comment-container">
+					<h2 class="comment-title">评论</h2>
+					<ul class="comment-list commentInfoList">
+						<li>
+							<header class="cmt-title">
+								<h3 class="cmt-name">雾里看花</h3>
+								<time class="cmt-time" pubdate="pubdate">2016-05-16</time>
+							</header>
+							<div class="cmt-content">
+								这么好看的视频，打着灯笼都找不到，你知道吗？
+							</div>
+						</li>
+					</ul>
+					<a class="comment-link-more cmt-more j-CatMore catMore" href="javascript:;" style="display: none;">
+						<span>更多评论(</span>
+						<span class="remain-comment">26</span>
+						<span>条)</span>
+					</a>
+				</section>-->
+			</article>
+			<!--<div class="comment">
+				<div class="wrapper">
+					<div class="txt">
+						<input type="text" name="" id="" value="" placeholder="添加评论" />
+					</div>
+					<button class="publish-comment">发表评论</button>
+				</div>
+			</div>-->
+
+			<div class="share" style="display: none;">
+				<div class="share-container">
+					<div class="up-section">
+						<a href="javascript:void(0);" id="JS_share_close"><i class="close"></i></a>
+					</div>
+					<div class="share-list">
+						<!--<div class="share-item">
+							<a onclick="jiathis_mh5.sendTo('weixin');" title="分享到微信" class="ico-share ico-share-weixin"></a>
+							<p>微信</p>
+						</div>
+						<div class="share-item">
+							<a onclick="jiathis_mh5.sendTo('tqq');" class="ico-share ico-share-friend"></a>
+							<p>朋友圈</p>
+						</div>-->
+						<div class="share-item">
+							<a onclick="jiathis_mh5.sendTo('tsina');" title="分享到新浪微博" class="ico-share ico-share-weibo"></a>
+							<p>微博</p>
+						</div>
+						<!--<div class="share-item">
+							<a onclick="jiathis_mh5.sendTo('qq');" title="分享到QQ" class="ico-share ico-share-qq"></a>
+							<p>QQ</p>
+						</div>-->
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="../js/zepto.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="http://v3.jiathis.com/code/jiathis_m.js" charset="utf-8"></script>
+		<script src="../js/common.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("#JS_share_close").on("click",function(){
+					$(".share").css("display","none");
+				})
+				$("#JS_share_open").on("click",function(){
+					$(".share").css("display","block");
+				})	
+				
+				var id = window.location.href.split("=")[1];
+				var str = window.location.href.split("?")[1];
+				
+				if(str.split("=")[0]=="newsId"){
+					$(".mob-header .text").html("大会视频");
+				}
+				
+				if(str.split("=")[0]=="newsId"){
+					$.get(Util.CiepUrl + "/video/vod/vod!getByidinfo.action" + "?id="+id,function(data){					
+						console.log(data);
+						if(data.code==0){
+							$("#JS_video_controls").attr("src",Util.CiepUrl+data.data.videopath);
+							$(".video-title h1").html(data.data.title);
+							$("#JS_video_controls").attr("autoplay","autoplay");
+						}
+					})
+				}else{
+					$.get(Util.CiepUrl+"/history-video/detail.action"+"?historyVideo.id="+id,function(data){
+						console.log(data);
+						if(data.code==0){
+							$("#JS_video_controls").attr("src",Util.CiepUrl+data.historyVideo.url);
+							$(".video-title h1").html(data.historyVideo.title);
+							$("#JS_video_controls").attr("autoplay","autoplay");
+						}
+					})
+				}
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			})
+		</script>
+	</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html style="font-size: 23.4375px;">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>用户登录</title>
+		<link rel="shortcut icon" href="../img/icon/favicon.ico"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="../css/common.css" />
+		<link rel="stylesheet" type="text/css" href="../css/login.css" />
+	</head>
+
+	<body style="background: url(../img/login/loginBg.png); background-size: 100%; background-repeat: no-repeat;">
+		<header class="mob-header" style="background: none; border-bottom: 1px solid rgba(153,153,153,0.4); position: absolute;">
+			<div class="mob-header-content">
+				<a href="../index.html" class="back"></a>
+				<div class="layout-middle">
+					<div class="text">登录</div>
+				</div>
+				<a href="javascript:void(0);" class="search" style="display: none;">
+					<span></span>
+				</a>
+			</div>
+		</header>
+		<div class="viewport">
+			<div class="user-login-img">
+				<img src="../img/login/logo.png" />
+			</div>
+			<div class="login-type-toggle">
+				<ul class="login-type-password">
+					<li class="ipt-account">
+						<i class="user-icon account-icon"></i>
+						<input type="text" placeholder="请输入电子邮箱地址" class="input-name" value="">
+						<i class="user-icon del-icon" style="display: block; transform-origin: 0 0 0; opacity: 1; transform: scale(1,1);"></i>
+					</li>
+					<li class="ipt-password">
+						<i class="user-icon password-icon"></i>
+						<input type="password" placeholder="6-25位字母、数字或下划线" id="inputpasswrod" class="input-password" value="">
+						<i class="user-icon del-icon" style="display: block; transform-origin: 0 0 0; opacity: 1; transform: scale(1,1);"></i>
+						<i class="user-icon show-password-icon JS-show-password-icon" style="display: block"></i>
+					</li>
+					<li class="btn-login">
+						<a href="javascript:void(0);" id="login" class="login-button">登录</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="login-options">
+				<p class="about-register">
+					<a class="ruick-register" href="register.html">注册</a>
+					<a class="retrieve-password" href="retrieverPassword.html">忘记密码?</a>
+				</p>
+			</div>
+			<div class="mob-login-extLogin">
+				<div class="hd">
+					<span class="icon-extLogin"></span>
+				</div>
+				<div class="bd">
+					<div class="mob-login-extLogin-item">
+						<a href="javascript:void(0);" class="icon-extLogin-weixin"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="../js/sea.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/config.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			seajs.use(["login"],function(login){
+				login.initLogin();
+			})
+		</script>
+
+	</body>
+
+</html>

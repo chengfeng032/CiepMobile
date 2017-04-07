@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html style="font-size: 23.4375px;">  
+	<head>
+		<meta charset="UTF-8">
+		<title>用户注册</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="../css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/login.css"/>
+	</head>
+	<body style="background-image: url(../img/login/registerBg.png); background-size: 100%; background-repeat: no-repeat;">		
+		<header class="mob-header no-bg">
+			<div class="mob-header-content">
+				<a href="../index.html" class="back"></a>
+				<div class="layout-middle">
+					<div class="text">注册</div>
+				</div>
+				<a href="login.html" class="login">
+					<span>登录</span>
+				</a>
+			</div>			
+		</header>
+		<div class="viewport">
+			<div class="start-step">
+				<div class="user-register-select">				
+					<!--<ul class="select-list">
+						<li class="select-list-item text-left current" id="personalReg">						
+							<span>个人注册</span>
+						</li>
+						<li class="select-list-item">
+							<span>单位注册</span>
+						</li>
+						<li class="select-list-item text-right">
+							<span>媒体注册</span>
+						</li>
+					</ul>-->
+				</div>
+				<div class="login-type-toggle">
+					<ul class="login-type-password">
+						<li class="ipt-account">
+							<i class="user-icon account-icon"></i>						
+							<input type="text" placeholder="请填写注册电子邮箱" class="input-name">
+							<i class="user-icon del-icon" id="JS_usename_del" style="display: inline; transform-origin: 0 0 0; opacity: 1; transform: scale(1,1);"></i>
+						</li>					
+						<li class="ipt-password" >
+							<i class="user-icon password-icon"></i>
+							<input type="password" placeholder="6-25位字母、数字或下划线" class="input-password">	
+							<i class="user-icon del-icon JS-del-icon" style="display: inline; transform-origin: 0 0 0; opacity: 1; transform: scale(1,1);"></i>
+							<i class="user-icon show-password-icon JS-show-password-icon" style="display: block"></i>
+						</li>	
+						<li class="btn-login">
+							<a href="javascript:void(0);" id="JS_register_button" class="login-button" >注册</a>
+						</li>
+					</ul>
+				</div>	
+				<div class="login-options">				
+					<p class="about-register">
+						<a href="registrationAgreement.html" class="define">注册既表示同意 《中国国际人才交流大会协议》</a>
+					</p>
+				</div>	
+			</div>
+			<section class="four-step res-succ" style="display: none;">
+				<div class="result">
+					<div class="success"></div>
+					<span class="res-msg">{{succ_username}},感谢您注册“中国国际人才交流大会”，请到注册邮箱进行验证，验证通过后该账号即可正常使用</span>
+				</div>				
+				<div class="submit-item">
+					<a href="javascript:void(0);" id="JS_submit_register">完成</a>
+				</div>
+		    </section>
+		</div>
+		<script src="../js/sea.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/config.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			seajs.use(["login"],function(login){
+				login.initRegister();
+			})
+		</script>
+	</body>	
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html style="font-size: 23.4375px;">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>编辑项目</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="../css/common.css" />
+		<link rel="stylesheet" type="text/css" href="../css/index.css" />
+
+	</head>
+
+	<body>
+		<header class="mob-header">
+			<div class="mob-header-content">
+				<a href="projectManage.html" class="back"></a>
+				<div class="layout-middle">
+					<div class="text">编辑项目</div>
+				</div>
+				<a href="javascript:void(0);" class="login" id="JS_project_save">
+					<span>保存</span>
+				</a>
+			</div>
+		</header>
+		<div class="viewport">
+			<ul class="personalInformation-list">
+				<li class="item">
+					<span class="label"><i>*</i>项目名称</span>
+					<div class="Right">
+						<input type="text" name="projectName" id="projectName" placeholder="项目名称" value="" />
+						<i class="icon-clear"></i>
+					</div>
+				</li>
+				<li class="item select-area">
+					<span class="label"><i>*</i>项目类型</span>
+					<span class="select-value mob-push-right select-push-right"></span>
+					<select class="xiala select-over-none" id="JS_project_type">
+					</select>
+				</li>
+				<li class="item select-area">
+					<span class="label"><i>*</i>行业领域</span>
+					<span class="select-value mob-push-right select-push-right"></span>
+					<select class="xiala select-over-none" id="JS_industry_areas"></select>
+				</li>
+				<li class="item">
+					<span class="label"><i>*</i>项目联系人</span>
+					<div class="Right">
+						<input type="text" name="contacts" id="contacts" placeholder="项目联系人" value="" maxlength="12" />
+						<i class="icon-clear"></i>
+					</div>
+				</li>
+				<li class="item">
+					<span class="label"><i>*</i>联系人职务</span>
+					<div class="Right">
+						<input type="text" name="position" id="position" placeholder="联系人职务" value="" maxlength="12" />
+						<i class="icon-clear"></i>
+					</div>
+				</li>
+				<li class="item">
+					<span class="label"><i>*</i>手&nbsp;&nbsp;&nbsp;机</span>
+					<div class="Right">
+						<input type="text" name="telphone" id="telphone" placeholder="手机" value="" maxlength="11" onkeyup="(this.v=function(){this.value=this.value.replace(/[^0-9-]+/,'');}).call(this)" />
+						<i class="icon-clear"></i>
+					</div>
+				</li>
+				<li class="item">
+					<span class="label"><i>*</i>座&nbsp;&nbsp;&nbsp;机</span>
+					<div class="Right">
+						<input type="text" name="landline" id="landline" placeholder="座机" value="" maxlength="15" />
+						<i class="icon-clear"></i>
+					</div>
+				</li>
+				<li class="item">
+					<span class="label"><i>*</i>电子邮箱</span>
+					<div class="Right">
+						<input type="text" name="email" id="email" placeholder="电子邮箱" value="" maxlength="20" />
+						<i class="icon-clear"></i>
+					</div>
+				</li>
+				<li class="item">
+					<span class="label"><i>*</i>传&nbsp;&nbsp;&nbsp;真</span>
+					<div class="Right">
+						<input type="text" name="fax" id="fax" placeholder="传真" value="" maxlength="12" />
+						<i class="icon-clear"></i>
+					</div>
+				</li>
+			</ul>
+			<ul class="personalInformation-list">
+				<li class="item">
+					<span class="label"><i>*</i>项目介绍</span>
+					<!--<div class="number"><span class="current">0</span>/200</div>-->
+				</li>
+				<li class="item textarea" style="height: 5.12rem;">
+					<textarea class="miaoshu" id="project_jieshao" placeholder="请输入自我评价"></textarea>
+				</li>
+			</ul>
+		</div>
+		<script src="../js/sea.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/config.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			seajs.use(["userCenter"], function(userCenter) {
+				userCenter.initProjectManageEdit();
+			})
+		</script>
+	</body>
+
+</html>

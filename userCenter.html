@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html style="font-size: 23.4375px;">
+	<head>
+		<meta charset="UTF-8">
+		<title>用户中心</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />	
+		<meta name="format-detection"  content="telephone=no">
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="css/usercenter.css"/>
+		
+	</head>
+	<body>
+		<header class="mob-header" style="background: none; position: absolute;">
+			<div class="mob-header-content">
+				<a href="javascript:void(0);" class="logo" style="display: none;">
+					<span></span>
+				</a>
+				<div class="layout-middle">
+					<div class="text">个人中心</div>
+				</div>
+				<a href="javascript:void(0);" class="search" style="display: none;">
+					<span></span>
+				</a>
+			</div>			
+		</header>
+		
+		<div class="viewport mb" style="margin-top: 0;">			
+			<div class="user-area-top"></div>	
+			<div class="section-block border-b">
+				<ul class="mob-table-view setting-table-view no-border">
+					<li class="mob-table-view-cell">
+						<a href="userCenter/myCandidate.html" class="mob-navigate-right" data-type="我的求职">
+							<i class="iconfont icon-wodeqiuzhi"></i>
+							<span >我的求职</span>						
+						</a>
+					</li>
+					<li class="mob-table-view-cell">
+						<a href="userCenter/projectManage.html" class="mob-navigate-right" data-type="项目管理">
+							<i class="iconfont icon-xiangmuguanli"></i>
+							<span>项目管理</span>						
+						</a>
+					</li>
+					<li class="mob-table-view-cell">
+						<a href="userCenter/personalInformation.html" class="mob-navigate-right" data-type="个人资料">
+							<i class="iconfont icon-gerenziliao"></i>
+							<span>个人资料</span>						
+						</a>
+					</li>
+					<!--<li class="mob-table-view-cell">
+						<a href="userCenter/browsingRecord.html" class="mob-navigate-right" data-type="浏览记录">
+							<i class="iconfont icon-liulangjilv"></i>
+							<span>浏览记录</span>						
+						</a>
+					</li>-->
+				</ul>
+			</div>
+			<div class="section-block border-b">
+				<ul class="mob-table-view setting-table-view no-border">
+					<li class="mob-table-view-cell">
+						<a href="userCenter/myMeeting.html" class="mob-navigate-right" data-type="我的会议">
+							<i class="iconfont icon-wodehuiyi"></i>
+							<span>我的会议</span>						
+						</a>
+					</li>
+					<li class="mob-table-view-cell">
+						<a href="userCenter/myConcern.html" class="mob-navigate-right" data-type="我的关注">
+							<i class="iconfont icon-wodeguanzhu"></i>
+							<span>我的关注</span>						
+						</a>
+					</li>
+					<li class="mob-table-view-cell">
+						<a href="userCenter/myNotice.html" class="mob-navigate-right" data-type="我的消息">
+							<i class="iconfont icon-wodexiaoxi"></i>
+							<span>我的消息</span>						
+						</a>
+					</li>				
+				</ul>
+			</div>
+			<div class="section-block border-b">
+				<ul class="mob-table-view setting-table-view no-border setting">
+					<li class="mob-table-view-cell">
+						<a href="tel:0755-22673275" class="mob-navigate-right" data-type="联系我们">
+							<i class="iconfont icon-lianxiwomen"></i>
+							<span>联系我们</span>	
+							<span style="position: absolute;right: 1.5rem;color: #999;">0755-22673275</span>
+						</a>
+					</li>					
+				</ul>
+			</div>
+			<div class="section-block border-c">
+				<ul class="mob-table-view setting-table-view no-border setting">
+					<li class="mob-table-view-cell">
+						<a href="userCenter/setup.html" class="mob-navigate-right" data-type="设置">
+							<i class="iconfont icon-shezhi"></i>
+							<span>设置</span>						
+						</a>
+					</li>					
+				</ul>
+			</div>
+		</div>
+		<footer class="mob-footer">
+			<a href="index.html" class="footer-link">
+				<span class="index-nav icon-index"></span>
+				<p>首页</p>
+			</a>
+			<a href="meetingPlate.html" class="footer-link">
+				<span class="index-nav icon-dahuibankuai"></span>
+				<p>大会板块</p>
+			</a>
+			<a href="zhanpiao.html" class="footer-link">
+				<span class="index-nav icon-zhanpiao"></span>
+				<p>展票</p>
+			</a>
+			<a href="userCenter.html" class="footer-link bottom-nav-current">
+				<span class="index-nav icon-mine-shi"></span>
+				<p>我的</p>
+			</a>
+		</footer>
+		<script src="js/sea.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/config.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			seajs.use(["userCenter"],function(userCenter){
+				userCenter.initUser();
+			})
+		</script>
+	</body>	
+</html>

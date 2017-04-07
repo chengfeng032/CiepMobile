@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html style="font-size: 23.4375px;">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>我的消息</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="../css/common.css" />
+		<link rel="stylesheet" type="text/css" href="../css/usercenter.css"/>
+	</head>
+
+	<body>
+		<header class="mob-header">
+			<div class="mob-header-content">
+				<a href="../userCenter.html" class="back"></a>
+				<div class="layout-middle">
+					<div class="text">我的消息</div>
+				</div>
+				<a href="javascript:void(0);" class="search" style="display: none;">
+					<span></span>
+				</a>
+			</div>
+		</header>
+		<div class="viewport">
+			<div class="mynotice">
+				<ul class="notice-list">
+					<!--<li class="notice-list-item">
+						<div class="single">
+							<div class="notice-icon">
+								<span class="icon-xiaomishu"></span>
+								<span class="icon-number">1</span>
+							</div>
+							<div class="notice-content">
+								<div class="hd xiaomishus">
+									<span class="title">我的小秘书</span>
+									<time class="time">2016-11-12</time>
+								</div>
+							</div>
+						</div>
+					</li>-->
+					<template id="JS_messge_item">
+						{{each rows as value i}}
+					<li class="notice-list-item">
+						<div class="single">
+							<div class="notice-icon">
+								<span class="icon-xitongtongzhi"></span>
+							</div>
+							<div class="notice-content">
+								<div class="hd">
+									<span class="title">{{value.messageText.title}}</span>
+									<time class="time">{{value.messageText.createtime}}</time>
+								</div>
+								<div class="notice-status-close">
+									<span class="tishi">{{value.messageText.content}}</span>
+									<!--<a href="javascript:void(0);" class="open">[展开]</a>-->
+								</div>
+							</div>
+						</div>
+						{{/each}}
+					</template>
+						<!--<div class="detail">
+							<div class="notice-icon">
+								<span class="icon-xitongtongzhi"></span>
+							</div>
+							<div class="notice-content">
+								<div class="hd">
+									<span class="title">系统通知</span>
+									<time class="time">2016-11-12</time>
+								</div>
+								<div class="notice-status-open">
+									<div class="xinxi">
+										尊敬的王语嫣您好！
+										</br>您申请参加【海绵城市国际论坛】状态 审核通过 三天后您将收到报名成功的入场电子票，如有疑问可联系主办人。
+										</br>您也可以在 我的参展 中查看已报名的活动。
+									</div>
+									<div class="close">
+										<a href="javascript:void(0);" class="icon-pullup"></a>
+									</div>
+								</div>
+							</div>
+				</div>-->
+					</li>
+				</ul>
+				<div class="empty" style="text-align: center; margin-top: 5rem; color: #ccc;">
+					<p>暂无消息</p>
+				</div>
+			</div>
+		</div>
+		<script src="../js/sea.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/config.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			seajs.use(["userCenter"],function(userCenter){
+				userCenter.initMyNotice();
+			})
+		</script>
+	</body>
+	
+</html>

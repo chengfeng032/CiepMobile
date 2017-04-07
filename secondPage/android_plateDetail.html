@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html style="font-size: 23.4375px;"> 
+	<head>
+		<meta charset="UTF-8">
+		<title>板块详情</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="../css/common.css"/>
+		<style type="text/css">
+		.platedetail-title{
+			height: 1.664rem;
+			line-height: 1.664rem;
+			border-bottom: 1px solid #CCCCCC;
+			background: #FFFFFF;
+			font-size: 0.64rem;
+			color: #333333;
+			text-align: center;
+		}
+		.platedetail-intro{			
+			border-bottom: 1px solid #CCCCCC;
+			background: #FFFFFF;
+			display: flex;
+		}
+		.platedetail-intro .title{
+			color: #509be4;
+			font-size: 0.6827rem;
+			width: 4.2667rem;
+			padding: 0.512rem;
+		}
+		.platedetail-intro .content{
+			font-size: 0.5973rem;
+			color: #333333;
+			padding: 0.512rem;
+		}
+		.platedetail-container{
+			background: #e9f2f5;
+		}
+		.platedetail-container .instro-name{
+			height: 1.7066rem;
+			line-height: 1.7066rem;
+			border-bottom: 1px solid #CCCCCC;
+			font-size: 0.64rem;
+			color: #509be4;
+			padding-left: 0.512rem;
+		}
+		.platedetail-container .intro-list-item{
+			padding: 0.512rem;		
+			background: #FFFFFF;	
+			border-bottom: 1px solid #CCCCCC;
+			margin-bottom: 0.4267rem;
+		}
+		.platedetail-container .intro-list-item .title{
+			font-size: 0.5973rem;
+			color: #333333;
+			border-bottom: 1px dashed #CCCCCC;
+			height: 1.28rem;
+			line-height: 1.28rem;
+		}
+		.platedetail-container .intro-list-item .address{
+			font-size: 0.5547rem;
+			color: #999999;
+			padding: 0.2133rem 0;
+		}
+		.platedetail-container .intro-list-item .time{
+			font-size: 0.512rem;
+			color: #999999;
+		}
+		.intro-list-item a{
+			display: block;
+		}
+	</style>
+	</head>
+	<body>		
+		<div class="viewport" style="margin-top: 0;">
+			<div class="platedetail-title">
+				<span id="JS_plateName">全国引智成果展览交流</span>
+			</div>
+			<div class="platedetail-intro">
+				<div class="title">简介</div>
+				<div class="content">
+					本届大会地址是深圳会展中心1至6号馆，3、5、6楼的全部会议室以及五洲宾馆部分会议室。展览面积超越以往历届，总面积达70000平方米。
+				</div>
+			</div>
+			<div class="platedetail-container">
+				<header class="instro-name">展区介绍</header>
+				<ul class="intro-list" id="area_list">
+					<template id="intro_list">
+						{{each areaList as value i}}
+						<li class="intro-list-item">
+							<a href="forumDetail.html">
+								<div class="title">{{value.name}}</div>
+								<div class="address">{{value.description}}</div>
+								<!--<div class="time">
+									2016-11-21  09:00-15:00
+								</div>-->
+							</a>
+						</li>
+						{{/each}}
+					</template>
+				</ul>
+			</div>
+		</div>
+		<script src="../js/zepto.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/template.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/common.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				var id = document.location.href.split('=')[1];
+				var plateDetailInfo = Util.getAjax(Util.Interface['plateDetail'].params(id)).section;
+				
+				$("#JS_plateName").html(plateDetailInfo.name);
+				$(".content").html(plateDetailInfo.description);
+								
+				var html = template('intro_list', plateDetailInfo);
+				document.getElementById("area_list").innerHTML = html;
+				
+			})
+		</script>
+	</body>	
+</html>

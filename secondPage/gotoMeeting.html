@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html style="font-size: 23.4375px;">
+	<head>
+		<meta charset="UTF-8">
+		<title>我要参会</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="../css/common.css" />
+		<link rel="stylesheet" type="text/css" href="../css/index.css" />
+	</head>
+
+	<body>
+		<header class="mob-header">
+			<div class="mob-header-content">
+				<a href="../index.html" class="back"></a>
+				<div class="layout-middle">
+					<div class="text">我要参会</div>
+				</div>
+				<a href="javascript:void(0);" class="search" style="display: none;">
+					<span></span>
+				</a>
+			</div>
+		</header>
+		<div class="viewport">
+			<div class="hd meeting-title-tip">
+				<div class="horizontal">
+					<div class="step step1">
+						<span>1填写个人信息</span>
+					</div>
+					<div class="step step2">
+						<span class="next">></span>
+						<span>2单位及学历</span>
+					</div>
+					<div class="step step3">
+						<span class="next">></span>
+						<span>3选择板块</span>
+					</div>
+				</div>
+				<div class="remarks">
+					注：请如实填写您的基本信息（"*"号表示必填）
+				</div>
+			</div>
+			<section class="first-step" style="display: block;">
+				<ul class="personalInformation-list">
+					<li class="item">
+						<span class="label"><i>*</i>真实姓名</span>
+						<div class="Right">
+							<input type="text" name="chinaName" id="chinaName" placeholder="真实姓名" value="" maxlength="12" />
+							<i class="icon-clear"></i>
+						</div>
+					</li>
+					<li class="item">
+						<span class="label"><i>*</i>性&nbsp;&nbsp;&nbsp;别</span>
+						<form class="Right">
+							<input type="radio" id="man" name="sex" class="regular-radio big-radio" value="男" checked/>
+							<label for="man" class="label-radio"></label><label for="man">男</label>
+							<input type="radio" id="women" name="sex" class="regular-radio big-radio" value="女"/>
+							<label for="women" class="label-radio"></label><label for="women">女</label>
+							<!--<input type="radio" name="sex" id="man" value="男" checked="checked"/><label for="man">男</label>
+							<input type="radio" name="sex" id="women" value="女"/><label for="women">女</label>-->
+						</form>						
+					</li>
+					<li class="item select-area">
+						<span class="label"><i>*</i>国&nbsp;&nbsp;&nbsp;籍</span>
+						<span class="select-value mob-push-right select-push-right"></span>
+						<select class="xiala select-over-none" id="JS_country"></select>
+					</li>
+					<li class="item">
+						<span class="label"><i>*</i>联系电话</span>
+						<div class="Right">
+							<input type="text" name="telphone" id="telphone" placeholder="联系电话" value="" onkeyup="(this.v=function(){this.value=this.value.replace(/[^0-9-]+/,'');}).call(this)" maxlength="11"/>
+							<i class="icon-clear"></i>
+						</div>
+					</li>
+					<li class="item">
+						<span class="label"><i>*</i>电子邮箱</span>
+						<div class="Right">
+							<input type="text" name="email" id="email" placeholder="电子邮箱" value="" />
+							<i class="icon-clear"></i>
+						</div>						
+					</li>
+				</ul>
+				<div class="submit-item">
+					<a id="JS_gotoMeeting_next_secondStep" href="javascript:void(0);">下一步</a>
+				</div>
+			</section>
+			<section class="second-step" style="display: none;">
+				<ul class="personalInformation-list">
+					<li class="item">
+						<span class="label"><i>*</i>工作单位</span>
+						<div class="Right">
+							<input type="text" name="workunit" id="workunit" placeholder="工作单位" value="" />
+							<i class="icon-clear"></i>
+						</div>						
+					</li>
+					<li class="item">
+						<span class="label"><i>*</i>职&nbsp;&nbsp;&nbsp;位</span>
+						<div class="Right">
+							<input type="text" name="position" id="position" placeholder="职位" value="" />
+							<i class="icon-clear"></i>
+						</div>
+					</li>
+					<li class="item select-area">
+						<span class="label"><i>*</i>行业领域</span>
+						<span class="select-value mob-push-right select-push-right"></span>
+						<select class="xiala select-over-none" id="JS_industry_areas"></select>
+					</li>
+					<li class="item select-area">
+						<span class="label"><i>*</i>单位性质</span>
+						<span class="select-value mob-push-right select-push-right"></span>
+						<select class="xiala select-over-none" id="JS_unit_property"></select>
+					</li>
+					<li class="item select-area">
+						<span class="label"><i>*</i>单位规模</span>
+						<span class="select-value mob-push-right select-push-right"></span>
+						<select class="xiala select-over-none" id="JS_unit_size"></select>
+					</li>
+					<li class="item">
+						<span class="label"><i>&nbsp;</i>毕业院校</span>
+						<div class="Right">
+							<input type="text" name="university" id="university" placeholder="毕业院校" value="" />
+							<i class="icon-clear"></i>
+						</div>						
+					</li>
+					<li class="item select-area">
+						<span class="label"><i>*</i>学历学位</span>
+						<span class="select-value mob-push-right select-push-right"></span>
+						<select class="xiala select-over-none" id="JS_education_degree"></select>
+					</li>
+					<li class="item select-area">
+						<span class="label"><i>&nbsp;</i>所学专业</span>
+						<span class="select-value mob-push-right select-push-right"></span>
+						<select class="xiala select-over-none" id="JS_learn_major"></select>
+					</li>
+					<li class="item">
+						<span class="label"><i>&nbsp;</i>需要接待服务</span>
+						<form class="Right">
+							<input type="radio" id="yes" name="service" class="regular-radio big-radio" value="1" checked/>
+							<label for="yes" class="label-radio"></label><label for="yes">是</label>
+							<input type="radio" id="no" name="service" class="regular-radio big-radio" value="0"/>
+							<label for="no" class="label-radio"></label><label for="no">否</label>	
+						</form>						
+					</li>					
+				</ul>
+				<ul class="personalInformation-list">
+					<li class="item">
+						<span class="label"><i>*</i>来访目的<span>（多选）</span></span>
+					</li>
+					<li class="item select" id="itemselect">
+					</li>
+				</ul>
+				<div class="submit-item">
+					<a id="JS_gotoMeeting_next_thirdStep" href="javascript:void(0);">下一步</a>
+				</div>
+			</section>
+			<section class="third-step" style="display: none;">				
+				<ul class="plate-list">
+					<template id="JS_plate_list">
+						{{each rows as val j}}
+						<li class="plate-item">
+							<div class="header">
+								<a href="javascript:void(0);" class="nav_select_run mob-navigate-right"><span>{{val.name}}</span></a>
+							</div>
+							<div class="choice" style="display: none;">
+								{{each val.meetingList as value i}}
+								<div class="wrapper">
+									<!--<label><input type="checkbox" name="item" id="{{value.id}}" value="{{value.title}}"/>{{value.title}}</i></label>-->
+									<input type="checkbox" id="{{value.id}}" name="item" class="regular-radio big-radio" value="{{value.title}}"/>
+									<label for="{{value.id}}" class="label-radio"></label><label for="{{value.id}}">{{value.title}}</label>
+								</div>
+								{{/each}}
+							</div>
+						</li>	
+						{{/each}}
+					</template>
+				</ul>
+				<div class="choiced-meeting">
+					<div class="wrapper">
+						<div class="choice-container">
+							<a id="JS_check_meeting" href="javascript:void(0);" class="checkMeeting">查看已选会议</a>
+							<a href="#" id="JS_submit_meeting" class="submit">提交</a>
+						</div>
+					</div>					
+				</div>
+				<div class="choice-project" style="display: none;">
+					<div class="wrapper">
+						<div class="project-container">
+							<div class="hd">
+								<a id="JS_meeting_close" href="javascript:void(0);" class="mob-navigate-down close">我参加的板块及会议</a>		
+							</div>						
+							<ul class="bd">
+								<li style="max-height: 17rem;overflow: scroll;">
+									<!--<div class="header">全球才智论坛</div>-->
+									<div class="content">
+										<!--<div class="postion">
+											<span class="title">会议：展会场地布置</span><a href="javascript:void(0);" class="del"><span class="icon-del"></span></a>
+										</div>
+										<div class="postion">
+											<span class="title">会议：展会场地布置（付费）</span><a href="javascript:void(0);" class="del"><span class="icon-del"></span></a>
+										</div>	-->										
+									</div>
+								</li>								
+							</ul>								
+						</div>		
+					</div>
+				</div>
+			</section>
+		</div>
+		<script src="../js/sea.js" type="text/javascript" charset="utf-8"></script>		
+		<script src="../js/config.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">						
+			seajs.use(["gotoMeeting"],function(gotoMeeting){
+				gotoMeeting.initGotoMeeting(); 
+			})
+		</script>
+</html>

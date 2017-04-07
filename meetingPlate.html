@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html style="font-size: 23.4375px;">
+	<head>
+		<meta charset="UTF-8">
+		<title>大会板块</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+	</head>
+	<body>
+		<header class="mob-header">
+			<div class="mob-header-content">
+				<a href="javascript:void(0);" class="logo" style="display: none;">
+					<span></span>
+				</a>
+				<div class="layout-middle">
+					<div class="text">大会板块</div>
+				</div>
+				<a href="javascript:void(0);" class="search" style="display: none;">
+					<span></span>
+				</a>
+			</div>			
+		</header>
+		<div class="viewport mb">
+			<div class="meeting">
+				<ul class="meeting-list" id="JS_meeting_list">
+					<template id="meeting_list">
+						{{each rows as value i}}
+						<li class="meeting-list-item">
+							<a href="secondPage/plateDetail.html?id={{value.id}}" class="platedetail">
+								<img src="img/meeting_plate_bg.png" width="100%" height="100%"/>
+								<div class="block">
+									<div class="bg">
+										<div class="border">
+											<div style="display: table; width: 100%; height: 100%;">
+												<div style="display: table-cell; text-align: center; vertical-align: middle; width: 100%;">
+													<span>{{value.name}}</span>
+												</div>
+											</div>									
+										</div>
+									</div>
+								</div>
+							</a>
+						</li>
+						{{/each}}
+					</template>
+				</ul>
+			</div>
+		</div>
+		
+		<footer class="mob-footer">
+			<a href="index.html" class="footer-link">
+				<span class="index-nav icon-index"></span>
+				<p>首页</p>
+			</a>
+			<a href="meetingPlate.html" class="footer-link bottom-nav-current">
+				<span class="index-nav icon-dahuibankuai-shi"></span>
+				<p>大会板块</p>
+			</a>
+			<a href="zhanpiao.html" class="footer-link">
+				<span class="index-nav icon-zhanpiao"></span>
+				<p>展票</p>
+			</a>
+			<a href="userCenter.html" class="footer-link">
+				<span class="index-nav icon-mine"></span>
+				<p>我的</p>
+			</a>
+		</footer>
+		
+		<script src="js/sea.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/config.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			seajs.use(["meetingPlate"],function(meetingPlate){
+				meetingPlate.initMeeting();
+			})
+		</script>
+	</body>	
+</html>

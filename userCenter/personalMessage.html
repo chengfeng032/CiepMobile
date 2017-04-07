@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html style="font-size: 23.4375px;">
+	<head>
+		<meta charset="UTF-8">
+		<title>个人信息</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="../css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/index.css"/>
+	</head>
+	<body>
+		<header class="mob-header">
+			<div class="mob-header-content">
+				<a href="myResume.html" class="back"></a>
+				<div class="layout-middle">
+					<div class="text">个人信息</div>
+				</div>
+				<a href="javascript:void(0);" class="login" id="JS_personal_info_save">
+					<span>保存</span>
+				</a>
+			</div>			
+		</header>
+		<div class="viewport">
+			<ul class="personalInformation-list">
+				<li class="item">					
+					<span class="label"><i>*</i>真实姓名</span>
+					<div class="Right">
+						<input type="text" name="chinese" id="chinese" placeholder="真实名字" value="" />
+						<i class="icon-clear"></i>
+					</div>							
+				</li>	
+				<li class="item">					
+					<span class="label"><i>*</i>性&nbsp;&nbsp;&nbsp;别</span>
+					<form class="Right">
+						<input type="radio" id="man" name="sex" class="regular-radio big-radio" value="男" checked/>
+						<label for="man" class="label-radio"></label><label for="man">男</label>
+						<input type="radio" id="women" name="sex"  class="regular-radio big-radio" value="女"/>
+						<label for="women" class="label-radio"></label><label for="women">女</label>
+						
+						<!--<input type="radio" name="sex" id="man" value="男" checked="checked"/><label for="man">男</label>
+						<input type="radio" name="sex" id="women" value="女"/><label for="women">女</label>-->
+					</form>
+				</li>
+				<li class="item">					
+					<span class="label"><i>*</i>出生年月</span>
+					<input type="date" name="birthday" id="birthday" value="" class="mob-push-right date-push-right"/>					
+				</li>
+				<li class="item">					
+					<span class="label"><i>*</i>手机号码</span>
+					<div class="Right">
+						<input type="text" name="telphone" id="telphone" placeholder="手机号码" value="" />
+						<i class="icon-clear"></i>
+					</div>
+				</li>
+				<li class="item">					
+					<span class="label"><i>*</i>电子邮箱</span>
+					<div class="Right">
+						<input type="text" name="email" id="email" placeholder="电子邮箱" value="" />
+						<i class="icon-clear"></i>
+					</div>
+				</li>
+				<li class="item select-area">					
+					<span class="label"><i>*</i>工作年限</span>
+					<span class="select-value mob-push-right select-push-right"></span>
+					<select class="xiala select-over-none" id="JS_work_year"></select>  
+				</li>
+				<li class="item select-area">					
+					<span class="label"><i>*</i>目前薪资</span>	
+					<span class="select-value mob-push-right select-push-right"></span>
+					<select class="xiala select-over-none" id="JS_present_salary"></select>  
+				</li>
+				<li class="item select-area">					
+					<span class="label"><i>*</i>国&nbsp;&nbsp;&nbsp;籍</span>	
+					<span class="select-value mob-push-right select-push-right"></span>
+					<select class="xiala select-over-none" id="JS_country"></select>					
+				</li>
+				<li class="item">					
+					<span class="label"><i>*</i>当前城市</span>
+					<div class="Right">
+						<input type="text" name="currentCity" id="JS_current_city" placeholder="当前城市" value="" />
+						<i class="icon-clear"></i>
+					</div>					
+				</li>
+				<li class="item">					
+					<span class="label"><i>*</i>身高(cm)</span>
+					<div class="Right">
+						<input type="text" name="height" id="height" placeholder="身高" value="" />
+						<i class="icon-clear"></i>
+					</div>
+				</li>
+				<li class="item">					
+					<span class="label"><i>*</i>婚姻状况</span>
+					<form class="Right" style="height: 2rem;">
+						<input type="radio" id="married" name="married" class="regular-radio big-radio" value="已婚" checked/>
+						<label for="married" class="label-radio"></label><label for="married">已婚</label>
+						<input type="radio" id="unmarried" name="married" class="regular-radio big-radio" value="未婚"/>
+						<label for="unmarried" class="label-radio"></label><label for="unmarried">未婚</label>
+						
+						<!--<input type="radio" name="married" id="married" value="已婚" checked="checked"/><label for="married">已婚</label>
+						<input type="radio" name="married" id="unmarried" value="未婚"/><label for="unmarried">未婚</label>-->
+					</form>
+				</li>
+				<!--<li class="item">					
+					<span class="label"><i>*</i>QQ号</span>
+					<div class="Right">
+						<input type="text" name="qq" id="qq" placeholder="QQ" value="645121545" />
+						<i class="icon-clear"></i>
+					</div>
+				</li>-->
+				<li class="item">					
+					<span class="label"><i>*</i>微信号</span>
+					<div class="Right">
+						<input type="text" name="weixin" id="weixin" placeholder="微信" value="" />
+						<i class="icon-clear"></i>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<script src="../js/sea.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/config.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			seajs.use(["userCenter"],function(userCenter){
+				userCenter.initPersonalMessage();
+			})
+		</script>
+	</body>
+</html>

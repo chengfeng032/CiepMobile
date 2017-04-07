@@ -1,0 +1,75 @@
+@charset "utf-8";
+*{padding:0;margin:0;}
+li,ul,ol{list-style:none;}
+article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block;}
+a{color:#333;text-decoration:none;-webkit-tap-highlight-color:transparent;}
+a,a:active,input{outline:0;color:#333;}
+img{border:none;vertical-align:middle;}
+body{background-color:#ececec;font-family:"microsoft yahei";}
+.clearfix:after{clear:both;content:"020";display:block;height:0;line-height:0;visibility:hidden;font-size:1px;}
+.left{float:left;}
+@font-face{font-family:Muiicons;font-weight:400;font-style:normal;src:url(../fonts/mui.ttf) format('truetype')}
+.mob-header{position:fixed;height:1.8773rem;
+width:100%;top:0;z-index:3;background:#0061C0;}
+.no-bg{background:none;border-bottom:1px solid rgba(153,153,153,0.4);position:absolute;}
+.havebg{background:#0061C0;}
+.mob-header-content{position:relative;z-index:4;height:100%;}
+.mob-header .logo,.mob-header .search,.mob-header .back,.mob-header .login{position:absolute;display:block;}
+.mob-header .logo{height:1.1947rem;padding:0.3413rem 0.2133rem;left:0;top:0;}
+.mob-header .logo span{display:inline-block;width:1.8773rem;height:1.1947rem;background:url(../img/index/logo.png) center center no-repeat;background-size:cover;}
+.mob-header .search{height:1.8773rem;width:1.8773rem;right:0;top:0;display:flex;justify-content:center;align-items:center;}
+.mob-header .filtrate{height:1.8773rem;width:1.8773rem;right:0;top:0;display:flex;justify-content:center;align-items:center;position:absolute;}
+.mob-header .login{height:1.8773rem;line-height:1.8773rem;width:1.8773rem;padding:0 0.2133rem;right:0;top:0;text-align:center;font-size:0.64rem;color:#ffffff;}
+.mob-header .search span{display:inline-block;background:url(../img/index/search.png) center center no-repeat;background-size:cover;width:0.7467rem;height:0.768rem;}
+.mob-header .filtrate span{display:inline-block;background:url(../img/icon_filter.png) center center no-repeat;background-size:contain;width:1rem;height:0.768rem;}
+.mob-header .layout-middle{height:1.8773rem;margin:0 1.8773rem;}
+.mob-header .layout-middle .text{height:1.8773rem;line-height:1.8773rem;text-align:center;font-family:"microsoft yahei";font-size:0.768rem;color:#fff;overflow:hidden;}
+.index-nav{display:inline-block;width:0.9387rem;height:0.9387rem;background-image:url(../img/index/nav.png);background-repeat:no-repeat;background-size:cover;}
+.icon-index{background-position:0 -4.6933rem;}
+.icon-index-shi{background-position:0 -3.7547rem;}
+.icon-mine{background-position:0 -2.816rem;}
+.icon-mine-shi{background-position:0 -1.8773rem;}
+.icon-zhanpiao{background-position:0 -0.9387rem;}
+.icon-zhanpiao-shi{background-position:0 0;}
+.icon-dahuibankuai{background-position:0 -6.5707rem;}
+.icon-dahuibankuai-shi{background-position:0 -5.632rem;}
+.mob-footer{position:fixed;z-index:99;bottom:0;border-top:1px solid #b2b2b2;width:100%;height:2.0693rem;background-color:#fff;display:-webkit-box;display:flex;/*justify在每个子元素之间分割多余的空间（首个子元素前和最后一个子元素后没有多余的空间）。*/
+-webkit-box-pack:justify;-webkit-box-align:center;justify-content:space-between;/*项目位于各行之间留有空白的容器内。*/
+align-content:center;/*项目位于容器的中心*/
+}
+.mob-footer .footer-link{display:block;width:25%;font-size:0.4267rem;color:#666;text-align:center;font-family:"microsoft yahei";}
+.mob-footer .footer-link span{margin-top:0.256rem;}
+.mob-footer .footer-link p{line-height:100%;}
+.viewport{margin-top:1.8773rem;min-width:320px;max-width:750px;margin-left:auto;margin-right:auto;}
+.mb{margin-bottom:2.56rem;}
+.mob-navigate-right:after,.mob-navigate-down:after,.mob-navigate-up:after,.mob-push-left:after,.mob-push-right:after,.mob-header .back:after{font-family:Muiicons;font-size:inherit;line-height:1;position:absolute;top:50%;display:inline-block;-webkit-transform:translateY(-50%);transform:translateY(-50%);text-decoration:none;color:#bbb;-webkit-font-smoothing:antialiased}
+.mob-header .back:after{left:0.32rem;content:'\e582';font-size:1.1307rem;color:#fff;}
+.mob-header .back{width:1.8773rem;height:1.8773rem;}
+.mob-single-text-overflow-ellipsis{display:inline-block;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;}
+.icon-del{display:inline-block;width:0.7467rem;height:0.7253rem;background-image:url(../img/userCenter/manage-del.png);background-repeat:no-repeat;background-size:cover;}
+.current-footer-font{color:#529ce5;}
+.select-push-right:after{font-size:1.1307rem;color:#ccc;content:'\e583';}
+.select-value{display:inline-block;width:10rem;line-height:2.1rem;height:2.1rem;position:absolute;right:1.3rem;font-size:0.5973rem;color:#999;font-family:sans-serif;text-align:right;}
+.select-over-none{position:absolute;right:0;width:10rem;opacity:0;}
+.select-area{position:relative;overflow:hidden;}
+.date-push-right:after{font-size:1.1307rem;color:#ccc;content:'\e583';right:0.2rem;}
+input[type=date]::-webkit-datetime-edit{padding:1px;background:none}
+input[type=date]::-webkit-datetime-edit-fields-wrapper{background-color:#FFFFFF;}
+input[type=date]::-webkit-datetime-edit-text{color:#FFFFFF;padding:0 .3em;}
+/*input[type=date]::-webkit-datetime-edit-year-field{color:purple;}
+input[type=date]::-webkit-datetime-edit-month-field{color:blue;}
+input[type=date]::-webkit-datetime-edit-day-field{color:green;}
+*/
+input[type=date]::-webkit-inner-spin-button{visibility:hidden;}
+/*input[type=date]::-webkit-calendar-picker-indicator{border:1px solid #ccc;border-radius:2px;box-shadow:inset 0 1px #fff,0 1px #eee;background-color:#eee;background-image:-webkit-linear-gradient(top,#f0f0f0,#e6e6e6);color:#666;}
+*/
+input[type=date]{width:5.5rem;height:2rem;box-shadow:none;background:none;border:none;-webkit-tap-highlight-color:transparent;position:absolute;top:0;right:0;color:#999999;font-family:"microsoft yahei";font-size:0.5973rem;text-align:right;}
+label,input[type=text],select,textarea{-webkit-tap-highlight-color:transparent;}
+.regular-radio{display:none;}
+.regular-radio + label{-webkit-appearance:none;display:inline-block;position:relative;background-image:url(../img/icon/unselect.png);background-repeat:no-repeat;background-size:cover;}
+.regular-radio:checked + label{background-image:url(../img/icon/selected.png);background-repeat:no-repeat;background-size:cover;}
+.big-radio + label{padding:0.53rem 0.6rem;}
+.label-radio{position:absolute;top:0.15rem;}
+
+.bottom-nav-current p{color:#529ce5;}
+

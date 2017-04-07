@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html style="font-size: 23.4375px;">
+	<head>
+		<meta charset="UTF-8">
+		<title>新闻详情</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="../css/common.css" />
+	</head>
+
+	<body>		
+		<div class="viewport" style="margin-top: 0; margin-bottom: 0;">
+			<article class="article">
+				<header class="header">
+					<div class="title" id="newsDetil_title">聚天下英才 创复兴伟业</div>
+					<div class="wrapper">
+						<time class="time" id="newsDetil_time">2016-07-12   16:08</time>						
+					</div>
+				</header>
+				<div class="content">
+					<!--<img id="newsDetil_img" src="../img/4547.png" width="100%"/>-->
+					<div class="desc" id="newsDetil_content">
+						<p>北京市科学技术研究院研修中心是为科技人员提供专业技术和现代管理培训、承担学术交流工作的事业单位。
+						自2001年成立以来，开展各类培训项目50余项。主要包括：赴英国华威大学科研团队跨文化创新战略专题培训、
+						创新与团队境外培训、赴澳大利亚堪培拉大学培训、项目管理培训、高级职业经理人认证、北京市高级企业管理研修班等，
+						还将户外体验式拓展训练和辩论赛作为培训项目的必修课，深入体验管理知识。</p>
+						</br><p>我们将进一步拓展培训的深度和广度，	结合我院的发展方向，将培养高层次、国际性、开放性人才作为我们的工作方向，发挥培训的先导性、全局性、基础性功能，
+						重视培训对科技企业的支撑作用，满足科技创新对各类人才的需求以及各类人才对优质教育的渴望。</p>
+					</div>
+				</div>
+			</article>
+		</div>
+		<script src="../js/zepto.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/common.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				var uri = "";
+				var news = "/index/news!getByidinfo.action";
+								
+				uri = window.location.href.split('?')[1];
+				var URL = Util.CiepUrl+news+"?"+uri;
+				//alert(URL);
+				
+				var result = getAjax(URL);
+				console.log(result);
+				$("#newsDetil_title").text(result.title);
+				$("#newsDetil_time").html(result.createtimeString);
+				$("#newsDetil_content").html(result.content);
+				$("#newsDetil_img").attr({"src":Util.CiepUrl+result.pcimg});
+			
+			  	function getAjax(Url){
+			  		var $value;
+			  		$.ajax({
+			  			type:"get",
+			  			url:Url,
+			  			async:false,
+			  			dataType:'json',
+						timeout:'300',
+						contentType: 'text/json',
+						success:function(data){
+							$value = data.data;
+						},
+						error: function(XMLHttpRequest, textStatus, errorThrown) {
+						  alert('Ajax error!')
+						}
+			  		});
+			  		return $value;
+			  	}	
+				
+			})
+				
+				
+			
+		</script>
+	</body>
+	<style>
+		.article{
+			padding: 0.512rem;
+			background: #FFFFFF;
+		}
+		.article .header .title{
+			font-size: 0.768rem;
+			color: #000000;
+			padding: 0.32rem 0;
+		}
+		.article .header .wrapper{
+			padding-bottom: 0.4267rem;
+			position: relative;
+		}
+		.article .header .wrapper .time{
+			font-size: 0.512rem;
+			color: #CCCCCC;
+		}
+		.article .header .wrapper .share{
+			display: inline-block;
+			background-image: url(../img/unshare.png);
+			background-repeat: no-repeat;
+			background-size: cover;
+			width: 0.5547rem;
+			height: 0.6187rem;			
+			position: absolute;
+			right: 0.2133rem;
+			top: 0.5973rem;			
+		}
+		.article .content {
+			padding-top: 0.4267rem;
+		}
+		.article .content .desc{
+			font-size: 0.5973rem;
+			color: #333333;
+			overflow: hidden;
+			/*padding-top: 0.64rem;*/
+		}
+		.article .content .desc img{
+			width: 100%;			
+			display: -webkit-flex;	
+			display: flex;
+		}
+		/*.article .content .desc p{
+			text-indent: 2em;
+			letter-spacing: 1px;
+		}*/		
+	</style>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html style="font-size: 23.4375px;">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>新闻中心</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="../css/common.css" />
+		<link rel="stylesheet" type="text/css" href="../css/news.css" />
+	</head>
+
+	<body>
+		<header class="mob-header">
+			<div class="mob-header-content">
+				<a href="../index.html" class="back"></a>
+				<div class="layout-middle">
+					<div class="text">新闻中心</div>
+				</div>
+				<a href="javascript:void(0);" class="search" style="display: none;">
+					<span></span>
+				</a>
+			</div>
+		</header>
+		<div class="viewport">
+			<ul class="newsCenter-nav clearfix">
+				<li>
+					<a href="javascript:void(0);" id="dahuixinwen" class="current">大会新闻</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);" id="hangyexinwen">行业新闻</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);" id="danweidongtai">单位动态</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);" id="dahuishipin">大会视频</a>
+				</li>
+			</ul>
+
+			<div class="bd">
+				<div class="news-list" id="dahuixinwen_list" style="display: block;">
+					<template id="news_list">
+						{{each rows as value i}}
+						<a class="news-detail-item notice_return" href="newsDetail.html?id={{value.id}}">
+							<div class="content">
+								<div class="news-title">{{value.title}}</div>
+								<div class="news-time">{{value.createtime}}</div>
+							</div>
+							<div class="img">
+								<img src="http://www.gtpnc.com{{value.pcimg}}" width="100%" height="100%" />
+							</div>
+						</a>
+						{{/each}}
+					</template>
+				</div>
+
+				<div class="dahuishipin-list" id="dahuishipin_list" style="display: none;">
+					<header class="videotitle">
+						<div class="wrapper">
+							<a href="javascript:void(0);" class="wangluozhibo current">
+								<span>网络直播</span>
+							</a>
+						</div>
+						<div class="vertical-line"><i></i></div>
+						<div class="wrapper">
+							<a href="javascript:void(0);" class="zhutifayan">
+								<span>主题发言</span>
+							</a>
+						</div>
+					</header>
+					<ul class="bonus-ad">
+						<template id="JS_dahuishipin_item">
+							{{each rows as value i}}
+							<li>
+								<a href="pastToReview.html?newsId={{value.id}}" class="shipin-img">
+									<i class="icon-playvideo"></i>
+									<img src="{{value.previewpath | imgsrc}}" width="100%" height="100%" style="width: 7.36rem; height: 4.78rem;" />
+								</a>
+								<div class="shipin-content">
+									<div class="title">{{value.title}}</div>
+									<div class="time">{{value.create_date}}</div>
+								</div>
+							</li>
+							{{/each}}
+						</template>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<script src="../js/sea.js" type="text/javascript" charset="utf-8"></script>		
+		<script src="../js/config.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">						
+			seajs.use(["news"],function(news){
+				news.initNews(); 
+			})
+		</script>
+	</body>
+</html>
